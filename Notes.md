@@ -32,4 +32,22 @@ Examples of generative models: HMM, GMM and Naive Bayes.
 P(y=1|x) = P(x|y=1) * P(y=1) / P(x)
 
 P(x) = sum_y{P(x,y)} = P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;P(x)=\sum_y{P(x,y)}=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" title="bayes2" />
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
+## INTERPRETING MODELS
+The learned weights for any classification linear model are not more informative than the learned weights for any other classification linear model. When classifying examples, the magnitude of the learned weights tells you the importance placed upon a feature and the sign of the learned weight tells you whether the feature is used to discriminate in favour of the "positive" class or against the "positive" class (think about one vs rest multiclass classifier).
+ 
+For a decision tree or each decision tree in a random forest, you should directly inspect the hierarchy of rules in the tree to interpret the learned model.
+ 
+For a convolutional neural network in computer vision, you should directly inspect the first layer (convolutional) of the neural net to understand the low-level features learned.
+
+## TUNING HYPERPARAMETERS
+Always perform cross-validation to tune your model on some validation set or just use k-fold cross-validation.
+
+Machine learning models are hyperparameter sensitive and require tuning. You cannot just run machine learning models as a black box. You need to tune the models, inspect the learned rules/weights and reason about the output of the models.
+
+## Accuracy, Precision, Recall, F1
+Accuracy = 
 
