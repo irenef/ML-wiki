@@ -32,9 +32,8 @@ Examples of generative models: HMM, GMM and Naive Bayes.
 P(y=1|x) = P(x|y=1) * P(y=1) / P(x)
 
 P(x) = sum_y{P(x,y)} = P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;P(x)=\sum_{\forall y}{P(x,y)}=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" title="P(x)=\sum_{\forall y}{P(x,y)}=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;P(x)=\sum_{y}{P(x,y)}=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" title="P(x)=\sum_{y}{P(x,y)}=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" />
 
-$$x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2b}.$$
 
 ## INTERPRETING MODELS
 The learned weights for any classification linear model are not more informative than the learned weights for any other classification linear model. When classifying examples, the magnitude of the learned weights tells you the importance placed upon a feature and the sign of the learned weight tells you whether the feature is used to discriminate in favour of the "positive" class or against the "positive" class (think about one vs rest multiclass classifier).
