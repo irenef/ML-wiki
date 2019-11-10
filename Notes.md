@@ -32,7 +32,7 @@ Examples of generative models: HMM, GMM and Naive Bayes.
 P(y=1|x) = P(x|y=1) * P(y=1) / P(x)
 
 P(x) = sum_y{P(x,y)} = P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;P(x)=\sum_{y} P(x,y)=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" title="P(x)=\sum_{y}{P(x,y)}=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;P(x)=\sum_{y} P(x,y)=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" title="P(x)=\sum_{y} P(x,y)=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" />
 
 
 ## INTERPRETING MODELS
