@@ -24,10 +24,12 @@ Difference between neural networks and linear models: neural networks learn a hi
 
 ## GENERATIVE MODELS VERSUS DISCRIMINATIVE MODELS
 Recall that each labelled example is an instance/feature-vector and label pair (x, y). A generative model learns the joint probability distribution of the instances and the labels P(x, y). A discriminative model learns the posterior probability distribution P(y | x). In general, the features learned by a generative model are associated with a particular class (i.e. correlated with that class) and the features learned by a discriminative model are used to distinguish between one class and the rest in a one versus rest multiclass classification scenario.
+
 Examples of discriminative models: SVM, logistic regression, perceptron and KNN.
 Examples of generative models: HMM, GMM and Naive Bayes.
 
 ## Bayes Rule 
 P(y=1|x) = P(x|y=1) * P(y=1) / P(x)
+
 P(x) = sum_y{P(x,y)} = P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)
 
