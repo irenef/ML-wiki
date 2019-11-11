@@ -32,7 +32,6 @@ Examples of generative models: HMM, GMM and Naive Bayes.
 P(y=1|x) = P(x|y=1) * P(y=1) / P(x)
 
 P(x) = sum_y{P(x,y)} = P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;P(x)=\sum_{y} P(x,y)=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" title="P(x)=\sum_{y} P(x,y)=P(x|y=1) * P(y=1) + P(x|y=0) * P(y=0)" />
 
 
 ## INTERPRETING MODELS
@@ -42,11 +41,40 @@ For a decision tree or each decision tree in a random forest, you should directl
  
 For a convolutional neural network in computer vision, you should directly inspect the first layer (convolutional) of the neural net to understand the low-level features learned.
 
+### Accuracy, Precision, Recall, F1
+Accuracy  = (TP+TN) / (TP+TN+FP+FN)
+Precision = (TP) / (TP+FP) --> when the cost of false positive is high 
+Recall    = (TP) / (TP+FN) --> when the cost of false negative is high 
+F1        = 2* (precision * recall) / (precision + recall)
+
 ## TUNING HYPERPARAMETERS
 Always perform cross-validation to tune your model on some validation set or just use k-fold cross-validation.
 
 Machine learning models are hyperparameter sensitive and require tuning. You cannot just run machine learning models as a black box. You need to tune the models, inspect the learned rules/weights and reason about the output of the models.
 
-## Accuracy, Precision, Recall, F1
-Accuracy = 
+## DETECTING OVERFITTING
+It is a good idea to plot how training error and validation error change with the number of updates for gradient-based machine learning models. This will help you detect overfitting and see if regularisation is appropriate.
 
+## REGULARISATION
+The purpose of regularisation is to prevent overfitting by constraining the weights and/or applying a penalty in the objective function to the weights of a model. There are other types of regularisation too such as data augmentation for training convolutional neural networks.
+
+## COMPARISON TO BASELINE
+Always compare the performance of your machine learning models to some kind of baseline on the test set. This could be a trivial baseline such as predicting the most common class in the test set for all test set examples or a standard machine learning model.
+
+## FEATURE ENGINEERING AND FEATURE SELECTION
+Typically, you need to try out multiple types of features to see if you can get better performance out of a particular machine learning model for your machine learning task. Feature selection tends to improve performance but not always. You never use feature selection in computer vision as far as I know.
+
+## FEATURE STANDARDISATION
+For certain machine learning models such as SVMs and logistic regression, it is a good idea to standardise the features to have a mean of 0 and a standard deviation of 1. You calculate the feature means and standard deviations using the training set and you apply these means/standard deviations to normalise the features in the train/valid/test sets. This is done to make sure that the models learned are not sensitive to scaling.
+
+## GRADIENT LEARNING
+When we wish to perform gradient learning to fit a model to data, we typically use so-called gradient following.
+ 
+Suppose we have an objective function that is a cost function. We want optimisation to find the hypothesis h in the hypothesis space H that is some kind of minimum (local minimum or global minimum) of the objective function. We simply take the gradient wrt the model parameters of the objective function and take a step of size eta in the direction of the negative gradient in the parameter space to fit the model in each parameter update iteration. The direction of the negative gradient is the direction of steepest descent of the objective function at the current parameter setting.
+ 
+Suppose we have an objective function that is a reward function. We want optimisation to find the hypothesis h in the hypothesis space H that is some kind of maximum (local maximum or global maximum) of the objective function. We simply take the gradient wrt the model parameters of the objective function and take a step of size eta in the direction of the positive gradient in the parameter space to fit the model in each parameter update iteration. The direction of the gradient is the direction of steepest ascent of the objective function at the current parameter setting.
+ 
+Gradient learning typically finds local minima or local maxima of the objective function. It is not guaranteed to find the global minimum or the global maximum.
+
+## PCA
+Principal Component Analysis (PCA) clearly explained by StatQuest -- https://www.youtube.com/watch?v=_UVHneBUBW0 
