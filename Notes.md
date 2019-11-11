@@ -77,4 +77,4 @@ Suppose we have an objective function that is a reward function. We want optimis
 Gradient learning typically finds local minima or local maxima of the objective function. It is not guaranteed to find the global minimum or the global maximum.
 
 ## PCA
-Principal Component Analysis (PCA) clearly explained by StatQuest -- https://www.youtube.com/watch?v=_UVHneBUBW0 
+[Principal Component Analysis (PCA) clearly explained by StatQuest](https://www.youtube.com/watch?v=_UVHneBUBW0 )
