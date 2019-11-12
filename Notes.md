@@ -43,8 +43,11 @@ For a convolutional neural network in computer vision, you should directly inspe
 
 ### Accuracy, Precision, Recall, F1
 Accuracy  = (TP+TN) / (TP+TN+FP+FN)
+
 Precision = (TP) / (TP+FP) --> when the cost of false positive is high 
+
 Recall    = (TP) / (TP+FN) --> when the cost of false negative is high 
+
 F1        = 2* (precision * recall) / (precision + recall)
 
 ## TUNING HYPERPARAMETERS
