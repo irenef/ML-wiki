@@ -81,3 +81,6 @@ Gradient learning typically finds local minima or local maxima of the objective 
 
 ## PCA
 [Principal Component Analysis (PCA) clearly explained by StatQuest](https://www.youtube.com/watch?v=_UVHneBUBW0 )
+
+## Autoencoder
+[Autoencoder: neural networks for unsupervised learning] (https://sefiks.com/2018/03/21/autoencoder-neural-networks-for-unsupervised-learning/)
